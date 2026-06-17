@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "seb's docs"
   text: "welcome to my documentation"
-  tagline: My great project tagline
+  tagline: print hello world
   actions:
     - theme: brand
       text: Markdown Examples
@@ -22,4 +22,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
