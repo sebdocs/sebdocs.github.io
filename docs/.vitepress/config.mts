@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { siRefinedgithub } from "simple-icons";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,6 +24,21 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [{ icon: "github", link: "https://github.com/sebhkx" }],
+    socialLinks: [
+      {
+        icon: "github",
+        link: "https://github.com/sebhkx",
+      },
+
+      {
+        icon: {
+          svg: siRefinedgithub.svg.replace(
+            "<title>Refined GitHub</title>",
+            "<title>Professional GitHub Portfolio</title>",
+          ),
+        },
+        link: "https://github.com/sebastianhkx",
+      },
+    ],
   },
 });
