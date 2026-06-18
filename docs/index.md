@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "seb's docs"
   text: "welcome to my documentation"
-  tagline: print hello world
+  tagline: haah hello world
   actions:
     - theme: brand
       text: Markdown Examples

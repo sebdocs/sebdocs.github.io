@@ -1,11 +1,12 @@
 import { defineConfig } from "vitepress";
-import { siRefinedgithub } from "simple-icons";
+import { siRefinedgithub, siSubstack } from "simple-icons";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "seb's docs",
   description: "welcome to my documentation",
   cleanUrls: true,
+  // appearance: false, // darkModeSwitchLabel
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -39,6 +40,20 @@ export default defineConfig({
         },
         link: "https://github.com/sebastianhkx",
       },
+
+      {
+        icon: {
+          svg: siSubstack.svg.replace(
+            "<title>Substack</title>",
+            "<title>My Substack</title>",
+          ),
+        },
+        link: "https://sebshh.substack.com/",
+      },
     ],
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2026 Sebastian",
+    },
   },
 });
