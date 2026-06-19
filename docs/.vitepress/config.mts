@@ -6,7 +6,7 @@ export default defineConfig({
   title: "seb's docs",
   description: "welcome to my documentation",
   cleanUrls: true,
-  // appearance: false, // darkModeSwitchLabel
+  appearance: false, // darkModeSwitchLabel
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

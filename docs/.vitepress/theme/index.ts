@@ -1,12 +1,14 @@
 // .vitepress/theme/index.ts
 
 import DefaultTheme from "vitepress/theme";
-
-import MyLayout from "./MyLayout.vue";
+import type { Theme } from "vitepress";
+import SimpleIcon from "./components/SimpleIcon.vue";
 
 import "./custom.css";
 
 export default {
-//   ...DefaultTheme,
-  Layout: MyLayout,
-};
+  extends: DefaultTheme,
+  enhanceApp({ app }) {
+    app.component("SimpleIcon", SimpleIcon);
+  },
+} satisfies Theme;
