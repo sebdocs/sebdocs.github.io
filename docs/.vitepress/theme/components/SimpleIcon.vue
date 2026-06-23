@@ -1,7 +1,17 @@
-<script setup>
-import iconRaw from "simple-icons/icons/codeblocks.svg?raw";
+<script setup lang="ts">
+import { computed } from "vue";
+import * as icons from "simple-icons";
+
+const props = defineProps<{
+  name: keyof typeof icons;
+}>();
+
+const svg = computed(() => {
+  const icon = icons[props.name];
+  return icon?.svg ?? "";
+});
 </script>
 
 <template>
-  <span class="inline-icon" v-html="iconRaw"></span>
+  <span v-html="svg" />
 </template>

@@ -15,14 +15,23 @@ hero:
   #     link: /api-examples
 
 features:
-  - title: Dynamic PayNow QR Generator
-    details: <SimpleIcon name="github" /> This simple to use QR generator keeps your phone number in local session so that you don't have to type it again.
-    link: https://sebastianhkx.github.com/payseb
-
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    
+  - title: hix
+  details: This simple to use QR generator keeps your phone number in local session so that you don't have to type it again.
+  link: https://sebastianhkx.github.com/payseb
+
+  - icon:
+    src: /icons/square.svg
+    width: 48
+    height: 48
+  title: Dynamic PayNow QR Generator
+  details: Generate PayNow QR codes dynamically
+  link: /your-page
+  linkText: Learn more
+
+
 ---
 
 <style>
