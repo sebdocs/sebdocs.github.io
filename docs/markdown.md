@@ -27,6 +27,10 @@ icon: simple/markdown
 
 ## Links and images
 
+- Reference-Style Link
+  - [`zensical serve`][serve] - Start local web server
+    [serve]: https://zensical.org/docs/usage/preview/
+
 ```
 [Link text](https://example.com)
 [Link with title](https://example.com "Hover title")
@@ -104,7 +108,7 @@ Use backslash to escape: \* \_ \# \`
 ## Line breaks
 
 ```
-End a line with two spaces  
+End a line with two spaces
 to create a line break.
 
 Or use a blank line for a new paragraph.

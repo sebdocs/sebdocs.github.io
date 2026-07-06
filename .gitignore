@@ -15,7 +15,6 @@ site
 # Distribution files
 dist
 
-
 # Caches and logs
 *.cpuprofile
 *.log

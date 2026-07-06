@@ -4,17 +4,30 @@ icon: lucide/rocket
 
 # Zensical
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+Full documentation [zensical docs](https://zensical.org/docs/).
+
+Icons by [lucide](https://lucide.dev/icons/) [simple](https://simpleicons.org/)
 
 ## Commands
 
-- [`zensical new`][new] - Create a new project
 - [`zensical serve`][serve] - Start local web server
+
 - [`zensical build`][build] - Build your site
+  - `zensical build -f zensical.toml --clean` fix index
 
   [new]: https://zensical.org/docs/usage/new/
   [serve]: https://zensical.org/docs/usage/preview/
   [build]: https://zensical.org/docs/usage/build/
+
+## explicit navigation layout in zensical.toml
+
+```
+nav = [
+    { "Home" = "index.md" },
+    { "Getting Started" = "getting-started.md" },
+    { "Advanced Guide" = "advanced/index.md" }
+]
+```
 
 ## Examples
 

@@ -2,13 +2,15 @@
 icon: lucide/square-terminal
 ---
 
+Generate key pair
+
 ```
 ssh-keygen -t ed25519 -C "HostName"
 ```
 
-ssh id_ed25519 + id_ed25519.pub
+1. Private key `id_ed25519` & Public `id_ed25519.pub`
 
-cat id_ed25519.pub add to id_ed25519
+2. cat id_ed25519.pub add to string to `~/.ssh/authorized_keys` on host machine
 
 ## Migration / new machine
 
