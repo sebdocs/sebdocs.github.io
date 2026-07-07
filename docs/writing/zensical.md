@@ -11,6 +11,7 @@ Icons by [lucide](https://lucide.dev/icons/) [simple](https://simpleicons.org/)
 ## Commands
 
 - [`zensical serve`][serve] - Start local web server
+- live update `zensical serve -f zensical.toml -o`
 
 - [`zensical build`][build] - Build your site
   - `zensical build -f zensical.toml --clean` fix index

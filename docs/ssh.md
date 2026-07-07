@@ -1,8 +1,8 @@
 ---
-icon: lucide/square-terminal
+icon: lucide/monitor-cloud
 ---
 
-Generate key pair
+## Generate key pair
 
 ```
 ssh-keygen -t ed25519 -C "HostName"
@@ -22,3 +22,11 @@ ssh-keygen -t ed25519 -C "HostName"
 
 3. Make the public key readable by everyone, writable only by you
    `chmod 644 ~/.ssh/id_ed25519.pub`
+
+- using tmux for persistent session
+
+1. `tmux new -s mysession`
+2. Detach from the session by pressing Ctrl + B, releasing, and then pressing D
+3. check on it later: `tmux attach -t mysession'
+
+- alternatively nohup
