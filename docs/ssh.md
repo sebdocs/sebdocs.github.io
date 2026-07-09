@@ -5,6 +5,7 @@ icon: lucide/monitor-cloud
 ## Generate key pair
 
 ```
+cd ~/.ssh
 ssh-keygen -t ed25519 -C "HostName"
 ```
 
@@ -30,3 +31,17 @@ ssh-keygen -t ed25519 -C "HostName"
 3. check on it later: `tmux attach -t mysession'
 
 - alternatively nohup
+
+## github multi accounts set up
+
+`~/.ssh/config`
+
+```
+# sebdocs
+
+Host github-sebdocs
+HostName github.com
+User git
+IdentityFile ~/.ssh/github-sebdocs
+IdentitiesOnly yes
+```
