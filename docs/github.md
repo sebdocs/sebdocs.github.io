@@ -16,6 +16,39 @@ git commit -m "message"
 git push origin main
 ```
 
+- working night shift hand-off
+
+```bash
+# 1. Create and switch to a feature branch (only do this the first day)
+git checkout -b feature/my-new-task
+
+# 2. Stage and commit everything, even if it's broken or half-written
+git add .
+git commit -m "WIP: saving progress for tonight"
+
+# 3. Push it to GitHub
+git push origin feature/my-new-task
+
+```
+
+- start of night
+
+```
+git fetch origin
+git checkout feature/my-new-task
+```
+
+- cleaning up wip (squash)
+
+```bash
+git checkout main
+git pull
+# Merge the feature branch and compress all intermediate commits into one
+git merge --squash feature/my-new-task
+git commit -m "Feat: completely finished the new task"
+git push origin main
+```
+
 ## git global
 
 ```bash
