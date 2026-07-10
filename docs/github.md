@@ -34,5 +34,5 @@ classic token for all access
 ```
 [alias]
 	whoami = !echo \"Author: $(git config user.name) <$(git config user.email)>\" && echo \"Remote: $(git remote get-url origin)\"
-	work = !git config user.name \"Seb @ work\" && git config user.email \"seb@work.com\" && echo \"✓ Switched to WORK\"
+	work = !git config user.name \"work-user\" && git config user.email \"ID+USERNAME@users.noreply.github.com\" && echo \"✓ Switched to WORK\"
 ```
