@@ -2,16 +2,19 @@
 icon: simple/github
 ---
 
-## merge conflicts
-
-- Prevention: good habit
+## Git commands
 
 ```
 git fetch
 git pull --rebase --autostash
 ```
 
-- show conflicted files `git status`
+```
+git status # show modified / conflicted files
+git add .
+git commit -m "message"
+git push origin main
+```
 
 ## git global
 
