@@ -20,3 +20,16 @@ source new_env_name/bin/activate
 ```
 conda activate base
 ```
+
+## VS Code
+
+```
+Run selection — Shf + Enter
+Clearn output — Cmd + K
+```
+
+- Code Runner (always run entire file) `"code-runner.ignoreSelection": true`
+
+```
+To run — Ctrl + Opt + N
+```

@@ -4,6 +4,11 @@ icon: simple/nodedotjs
 
 # Web stack
 
+## Node.js
+
+- VitePress change port
+  `npm run docs:dev -- --port 8080`
+
 ## Bun
 
 ## Hono
