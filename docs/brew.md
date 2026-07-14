@@ -45,7 +45,6 @@ brew install vcs
     #!/bin/zsh
 
     export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    export TERM=xterm-256color
     exec </dev/null
 
     # ===== SETTINGS =====
@@ -136,12 +135,11 @@ brew install vcs
 
 ## magick
 
-??? info "magick to chop image then stitch in columns"
+??? info "magick to remove vcs quirks"
 
     ```bash
     export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    export TERM=xterm-256color
-    exec </dev/null
+    exec </dev/null # avoid waiting keyboard input Automator
 
     for input in "$@"; do
     dir="${input:h}"
@@ -151,11 +149,32 @@ brew install vcs
         out="$dir/${match[1]}_s.jpg"
         vcs -n 30 --disable timestamps -o "$out" "$input"
     else
-        osascript -e "display alert \"No ID found\" message \"Filename does not contain pattern ABC-123\""
+        osascript -e "display alert \"No ID found\" message \"Filename doesn't match pattern\""
     fi
     done
 
-    magick "$out" -gravity south -chop 0x28 +repage "$out"
+    magick "$out" -gravity south -chop 0x28 +repage "$out" # remove vcs footer artifacts
 
     afplay /System/Library/Sounds/Glass.aiff
+    ```
+
+??? info "magick to chop image then stitch in columns (general)"
+
+    ```bash
+
+    #!/bin/zsh
+    for input in "$@"; do
+    dir="$(dirname "$input")"
+    filename="$(basename "$input")"
+    ext="${filename##_.}"
+    name="${filename%._}"
+
+    output="$dir/$name by3.$ext"
+
+    /opt/homebrew/bin/magick "$input" \
+        -gravity North -chop 0x297 \
+        -crop 1x3@ +repage \
+        +append \
+        "$output"
+    done
     ```
