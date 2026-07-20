@@ -4,10 +4,36 @@ icon: simple/python
 
 ## Libraries
 
+- polars
 - pickle
   `.pkl` freeze python objects e.g. machine learning model
 
-- List envs
+## Homebrew python
+
+- Managing venvs
+
+```bash
+mkdir my-project && cd my-project
+python -m venv .venv
+source .venv/bin/activate
+pip install uv fastapi uvicorn polars
+```
+
+```
+uv venv
+source .venv/bin/activate
+uv pip install fastapi
+```
+
+## Jupyter Notebook
+
+- Don't use !pip `%pip install pandas`!!
+
+## Conda (don't install until absolutely necessary)
+
+1. Install Xcode CLI `xcode-select --install`
+2. Install Homebrew
+3. Install python `brew install python`
 
 ```
 conda env list
