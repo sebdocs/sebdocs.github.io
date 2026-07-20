@@ -2,6 +2,11 @@
 icon: simple/python
 ---
 
+## Libraries
+
+- pickle
+  `.pkl` freeze python objects e.g. machine learning model
+
 - List envs
 
 ```

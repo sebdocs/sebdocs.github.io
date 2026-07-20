@@ -45,3 +45,29 @@ User git
 IdentityFile ~/.ssh/github-sebdocs
 IdentitiesOnly yes
 ```
+
+## tmux for picking up remote sessions
+
+1. Install tmux on server `brew install tmux`
+2. Allow mouse scroll `tmux set -g mouse on`
+
+```
+tmux new -s task
+```
+
+```
+# Detach session
+Ctrl + b
+d
+```
+
+```
+tmux ls
+tmux attach -t task
+```
+
+- Single command — create session “work” if it doesn’t exist, otherwise attach to it
+
+```
+tmux new -As work
+```
