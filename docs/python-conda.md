@@ -10,11 +10,15 @@ icon: simple/python
 
 ## Homebrew python
 
-- Managing venvs
+1. Install Xcode CLI `xcode-select --install`
+2. Install Homebrew
+3. Install python `brew install python`
+
+### Managing environments
 
 ```bash
 mkdir my-project && cd my-project
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install uv fastapi uvicorn polars
 ```
@@ -29,11 +33,7 @@ uv pip install fastapi
 
 - Don't use !pip `%pip install pandas`!!
 
-## Conda (don't install until absolutely necessary)
-
-1. Install Xcode CLI `xcode-select --install`
-2. Install Homebrew
-3. Install python `brew install python`
+## Conda (hard links packages - save disk space)
 
 ```
 conda env list
@@ -42,8 +42,8 @@ conda env list
 - Make new environment
 
 ```
-python3 -m venv new_env_name
-source new_env_name/bin/activate
+conda create -n myenv python=3.10 numpy pandas
+conda activate myenv
 ```
 
 - Go back default base
@@ -56,7 +56,7 @@ conda activate base
 
 ```
 Run selection — Shf + Enter
-Clearn output — Cmd + K
+Clear output — Cmd + K
 ```
 
 - Code Runner (always run entire file) `"code-runner.ignoreSelection": true`
