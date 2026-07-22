@@ -297,6 +297,12 @@ unset __conda_setup
 
 ```
 
+## sample with shebang (automator)
+
+```bash
+#!/bin/zsh
+```
+
 ## save commands shortcut
 
 ??? info "work in progress"
