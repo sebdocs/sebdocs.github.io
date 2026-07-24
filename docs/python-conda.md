@@ -13,15 +13,54 @@ icon: simple/python
 1. Install Xcode CLI `xcode-select --install`
 2. Install Homebrew
 3. Install python `brew install python`
+4. Ensure brew in PATH:
+
+```
+# ~/.zshrc
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
 
 ### Managing environments
+
+- pyenv
+
+```bash
+brew install pyenv
+# ~/.zshrc (first to run)
+eval "$(pyenv init - zsh)"
+pyenv global system
+```
+
+- direnv
+
+```bash
+brew install direnv
+echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc # last to run
+
+# inside particular project
+echo "layout python python3" > .envrc
+direnv allow
+# auto-activate environment (back to brew at $HOME)
+```
+
+- new project python version
+
+```
+pyenv install 3.12.10
+cd project; pyenv local 3.12.10
+```
+
+- built-in venv module
 
 ```bash
 mkdir my-project && cd my-project
 python3 -m venv .venv
 source .venv/bin/activate
 pip install uv fastapi uvicorn polars
+deactivate # not necessary with direnv
 ```
+
+- uv
 
 ```
 uv venv
