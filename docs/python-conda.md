@@ -4,6 +4,7 @@ icon: simple/python
 
 ## Libraries
 
+- [marimo](https://docs.marimo.io/#quickstart) `marimo edit`
 - polars
 - pickle
   `.pkl` freeze python objects e.g. machine learning model
@@ -48,7 +49,7 @@ direnv allow
 ```
 pyenv install 3.12.10
 cd project; pyenv local 3.12.10
-OR
+# OR
 pyenv global 3.13.5
 ```
 
