@@ -6,6 +6,28 @@ icon: lucide/square-terminal
 
 `gh auth status`
 
+## Vim
+
+- ~/.vimrc
+
+```
+# F2 to toggle line no.
+nnoremap <F2> :set nonumber!<CR>
+
+" Convert tabs to spaces
+set expandtab
+
+" Number of spaces that a <Tab> in the file counts for
+set tabstop=4
+
+" Number of spaces to use for each step of (auto)indent
+set shiftwidth=4
+
+" Number of spaces that a <Tab> counts for while performing editing operations
+set softtabstop=4
+
+```
+
 ## MacOS Terminal
 
 - Profiles tab -> Text sub-tab -> Cursor select Vertical Bar

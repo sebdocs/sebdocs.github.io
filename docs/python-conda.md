@@ -48,13 +48,15 @@ direnv allow
 ```
 pyenv install 3.12.10
 cd project; pyenv local 3.12.10
+OR
+pyenv global 3.13.5
 ```
 
 - built-in venv module
 
 ```bash
 mkdir my-project && cd my-project
-python3 -m venv .venv
+python3 -m venv .venv # DOUBLE CHECK if path is MacOS outdated version
 source .venv/bin/activate
 pip install uv fastapi uvicorn polars
 deactivate # not necessary with direnv
